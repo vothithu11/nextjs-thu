@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/data/motion";
 
 const Our = () => {
+  const staggerVariants = staggerContainer(0.5, 0.2);
   return (
    <div className='w-full h-screen'>
       <Header/>
@@ -17,7 +18,7 @@ const Our = () => {
       <img src='/image/books.png' alt='img' className='w-14 h-14 rounded-full bg-slate-50 absolute top-[59%] left-[50%] z=10'/>
       </div>
       <motion.div 
-       variants={staggerContainer}
+       variants={staggerVariants}
        initial="hidden"
        whileInView="show"
        viewport={{ once: false, amount: 0.5 }}
