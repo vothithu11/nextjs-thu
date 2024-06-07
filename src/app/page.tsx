@@ -1,10 +1,10 @@
 import SwipeToSlide from "@/sections/SwipeToSlide";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import Hero from "@/sections/Hero";
 import Environment from "@/sections/Environment";
 import Investor from "@/sections/Investor";
 import Navigation from "@/sections/Navigation";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <section className="xl:padding-1 wide: padding-b">
         <Hero/>
       </section>
-      <Navigation/>
+        <Navigation/>
       <section className="padding w-full bg-pale-blue">
         <SwipeToSlide/>
       </section>
@@ -23,7 +23,7 @@ export default function Home() {
       <section className="padding">
         <Investor/>
       </section>
-      <section className="padding">
+      <section className="">
         <Footer/>
       </section>
     </div>  

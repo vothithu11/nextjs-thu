@@ -17,8 +17,17 @@
     max-width: 1440px;
     margin: 0 auto;
   }
-  .input {
-    @apply sm:flex-1 max-sm:w-full text-base leading-normal pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:rounded-full;
+  .image-style {
+   clip-path: ellipse(70% 60% at 50% 1%);
+  }
+  .image-style-ver2 {
+  clip-path: ellipse(100% 90% at 50% 10%);
+   }
+  .image-style-ver3 {
+    clip-path: ellipse(100% 90% at 50% 50%);
+     }
+  .shadow-text {
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -55,9 +64,7 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
   
-  .transition-width {
-    transition-property: width;
-  }
+ 
   .text-custom{
     @apply text-[#204075] font-medium;
   }

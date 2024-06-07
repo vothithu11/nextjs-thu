@@ -15,17 +15,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-screen h-screen relative max-lg:w-auto max-lg:h-auto max-lg:pb-44" name="hero">
       <h2 className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-xl bg-black bg-opacity-50 p-2 rounded">
         Automatic Slideshow
       </h2>
-      <div className="w-full h-full">
+      <div className="">
         {images.map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`Slide ${index + 1}`}
-            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute w-full h-full max-lg:w-auto max-lg:h-auto object-cover transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
       </div>
