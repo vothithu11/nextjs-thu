@@ -33,7 +33,7 @@ const Brands= () =>{
             </motion.div >
             <div className=" grid grid-cols-3 padding -mb-12">
                 <div className="px-4">
-                <SlideBar getSearchResults={(results) => setItems(results)}/>
+                <SlideBar getSearchResults={(results: BrandListProps[]) => setItems(results)}/>
                 </div>
                 <div className="w-full col-span-2 -ml-20">
                 {items.length > 0 ? (
