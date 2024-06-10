@@ -1,6 +1,7 @@
 import CustomButton2 from "@/components/CustomButton2";
+import { BrandProps } from "@/data/type";
 
-export default function Brand({image, title}) {
+export default function Brand({image, title}:BrandProps) {
     return (
         <button className="transition duration-300 ease-in-out transform hover:scale-125 rounded-lg p-8 max-lg:p-2 max-lg:hover:scale-110 max-lg:padding-y max-lg:my-12">
             <div className="relative h-48 w-48 max-lg:h-28 max-lg:w-28 overflow-hidden mx-auto rounded-full shadow-lg">

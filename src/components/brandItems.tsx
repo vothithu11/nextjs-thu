@@ -1,6 +1,7 @@
 import React from 'react'
-import Brand from "./brand";
-const BrandItems = ({title, index, children}) => {
+import Brand from "./Brand";
+import { BrandItemsProps } from '@/data/type';
+const BrandItems = ({title, index, children}:BrandItemsProps) => {
   return (
     <div key={index} className="m-10 p-8 relative flex flex-row max-lg:-ml-24 max-md:grid max-md:grid-cols-1 max-md:p-2 max-md:justify-items-center max-md:m-2">
                         <h2 className="absolute top-0 left-2 text-4xl text-[#204075] font-bold max-lg:xl max-lg:padding-y max-md:mb-8">{title}</h2>

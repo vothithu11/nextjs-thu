@@ -1,8 +1,8 @@
-// NavItem.jsx
 import React from 'react';
 import Link from 'next/link';
+import { NavItemProps } from '@/data/type';
 
-const NavItem = ({ id, title, subTitle }) => {
+const NavItem = ({ id, title, subTitle }:NavItemProps) => {
   return (
     <li className="relative group h-full w-[250px] max-lg:hidden" key={id}>
       <Link href="" className="flex flex-row ">

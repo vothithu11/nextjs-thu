@@ -1,7 +1,8 @@
-import { images } from '@/data/data'
-import React from 'react'
+import { images } from '@/data/data';
+import React from 'react';
+import { SocialItemProps } from '@/data/type';
 
-const SocialItem = ({image, title}) => {
+const SocialItem = ({image, title}:SocialItemProps) => {
   return (
     <div className='relative hover:scale-110 transition duration-700'>
         <img className="w-[375px] h-[375px] max-lg:w-[150px] max-lg:h-[150px] rounded-full opacity-80 hover:opacity-100" src={image} alt="image"/>

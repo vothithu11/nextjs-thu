@@ -1,22 +1,23 @@
 "use client"
 import React from "react";
 import { brandList } from "@/data/data";
-import Brand from "@/components/brand";
+import Brand from "@/components/Brand";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import CustomButton from "@/components/CustomButton";
+import { BrandListProps } from "@/data/type";
 
 const SwipeToSlide = () => {
-  const getChildrenArray = (brandList) => {
+  const getChildrenArray = (brandList: BrandListProps[]) => {
     return brandList.flatMap(brand => brand.children);
   };
 
   const childrenArray = getChildrenArray(brandList);
   return (
-    <div className="max-lg:pt-80 max-md:pt-44" name="brands">
+    <div className="max-lg:pt-80 max-md:pt-44" id="brands">
       <div className="text-center text-[#003da5] pb-36 font-extrabold max-lg:pb-12">
         <p className="uppercase text-base max-lg:text-sm py-6">CÁC NHÃN HÀNG CỦA CHÚNG TÔI</p>
         <h2 className="text-4xl max-lg:text-2xl">Các sản phẩm giúp cuộc sống dễ dàng hơn</h2>

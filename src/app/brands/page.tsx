@@ -1,17 +1,18 @@
 "use client"
 import Hero from "@/sections/Hero";
 import Image from 'next/image';
-import { brandList, brandCatalogue } from "@/data/data";
+import { brandList } from "@/data/data";
 import SlideBar from "../../components/slideBar";
 import Header from "@/components/Header";
-import BrandItems from "../../components/brandItems";
+import BrandItems from "@/components/BrandItems";
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/data/motion";
+import { BrandListProps } from "@/data/type";
 
-export default function Brands() {
-    const [items, setItems] = useState([]);
+const Brands= () =>{
+    const [items, setItems] = useState<BrandListProps[]>([])
     const staggerVariants = staggerContainer(0.5, 0.2);
     return (
         <div className="w-full h-screen ">
@@ -32,16 +33,16 @@ export default function Brands() {
             </motion.div >
             <div className=" grid grid-cols-3 padding -mb-12">
                 <div className="px-4">
-                <SlideBar brandCatalogue={brandCatalogue} getSearchResults={(results) => setItems(results)}/>
+                <SlideBar getSearchResults={(results) => setItems(results)}/>
                 </div>
                 <div className="w-full col-span-2 -ml-20">
                 {items.length > 0 ? (
                         items.map((brand, index) => (
-                            <BrandItems key={index} title={brand.title} children={brand.children} />
+                            <BrandItems key={brand.id} title={brand.title} children={brand.children} />
                         ))
                     ) : (
                         brandList.map((brand, index) => (
-                            <BrandItems key={index} title={brand.title} children={brand.children} />
+                            <BrandItems key={brand.id} title={brand.title} children={brand.children} />
                         ))
                     )}
                 </div>
@@ -50,3 +51,4 @@ export default function Brands() {
         </div>
     );
 }
+export default Brands

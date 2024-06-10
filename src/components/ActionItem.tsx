@@ -1,7 +1,8 @@
 import React from 'react'
-import CustomButton from './CustomButton'
+import CustomButton from './CustomButton';
+import { ActionItemProps } from '@/data/type';
 
-const ActionItem = ({image, title, content}) => {
+const ActionItem = ({image, title, content}: ActionItemProps) => {
   return (
     <div className='space-y-4'>
         <img src={image} className='mx-auto'/>

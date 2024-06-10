@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "@/app/styles";
-const MapButton = ({title,svg}) => {
+import { MapButtonProps } from '@/data/type';
+const MapButton = ({title,svg}:MapButtonProps) => {
   return (
          <div className="relative max-lg:hidden">
           <div className='absolute'>

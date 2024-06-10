@@ -1,11 +1,7 @@
 import styles from "@/app/styles";
+import { CustomButtonProps } from "@/data/type";
 
-interface CustomButtonProps {
-  title: string;
-  handleClear: () => void; // Include the handleClear prop
-}
-
-const CustomButton: React.FC<CustomButtonProps> = ({ title, handleClear }) => {
+const CustomButton= ({ title, handleClear }:CustomButtonProps) => {
   return (
     <button
       onClick={handleClear}

@@ -3,12 +3,13 @@ import styles from "../app/styles/index";
 import { useState } from "react";
 import { brandList } from "@/data/data";
 import CustomButton from "./CustomButton";
+import { SlideBarProps, Brand } from "@/data/types";
 
-export default function SlideBar({ getSearchResults }) {
+export default function SlideBar({ getSearchResults }: SlideBarProps) {
   const [keyword, setKeyword] = useState('');
-  const [updateBrandList, setUpdateBrandList] = useState(brandList);
+  const [updateBrandList, setUpdateBrandList] = useState<Brand[]>(brandList);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const results = updateBrandList.filter((value) =>
       value.title.toLowerCase().includes(keyword.toLowerCase())
@@ -22,7 +23,7 @@ export default function SlideBar({ getSearchResults }) {
     getSearchResults(brandList);
   };
 
-  const handleCheckboxChange = (id) => {
+  const handleCheckboxChange = (id: number) => {
     const updatedList = updateBrandList.map((value) => {
       if (value.id === id) {
         return { ...value, completed: !value.completed };
@@ -78,7 +79,7 @@ export default function SlideBar({ getSearchResults }) {
       </div>
       <CustomButton
         title="Xóa"
-        handleClear={handleClear} // Pass the handleClear prop
+        handleClear={handleClear}
       />
     </div>
   );
