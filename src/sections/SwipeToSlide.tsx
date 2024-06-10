@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import { brandList } from "@/data/data";
-import Brand from "@/components/brand";
+import Brand from "@/components/Brand";
 import {
   Carousel,
   CarouselContent,

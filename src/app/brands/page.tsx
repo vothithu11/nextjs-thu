@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { brandList } from "@/data/data";
 import SlideBar from "@/components/slideBar";
 import Header from "@/components/Header";
-import BrandItems from "@/components/brandItems";
+import BrandItems from "@/components/BrandItems";
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
