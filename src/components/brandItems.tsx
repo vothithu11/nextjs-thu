@@ -1,5 +1,5 @@
 import React from 'react'
-import Brand from './Brand';
+import Brand from './brand';
 import { BrandItemsProps } from '@/data/type';
 const BrandItems = ({title, index, children}:BrandItemsProps) => {
   return (
