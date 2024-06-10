@@ -2,9 +2,9 @@
 import Hero from "@/sections/Hero";
 import Image from 'next/image';
 import { brandList } from "@/data/data";
-import SlideBar from "../../components/slideBar";
+import SlideBar from "@/components/slideBar";
 import Header from "@/components/Header";
-import BrandItems from "@/components/BrandItems";
+import BrandItems from "@/components/brandItems";
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
