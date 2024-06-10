@@ -1,15 +1,14 @@
 "use client";
-import styles from "../app/styles/index";
 import { useState } from "react";
 import { brandList } from "@/data/data";
 import CustomButton from "./CustomButton";
-import { SlideBarProps, Brand } from "@/data/types";
+import { SlideBarProps } from "@/data/type";
 
-export default function SlideBar({ getSearchResults }: SlideBarProps) {
+export default function SlideBar({ getSearchResults}: SlideBarProps ) {
   const [keyword, setKeyword] = useState('');
-  const [updateBrandList, setUpdateBrandList] = useState<Brand[]>(brandList);
+  const [updateBrandList, setUpdateBrandList] = useState(brandList);
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSearch = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const results = updateBrandList.filter((value) =>
       value.title.toLowerCase().includes(keyword.toLowerCase())
@@ -23,7 +22,7 @@ export default function SlideBar({ getSearchResults }: SlideBarProps) {
     getSearchResults(brandList);
   };
 
-  const handleCheckboxChange = (id: number) => {
+  const handleCheckboxChange = (id:number) => {
     const updatedList = updateBrandList.map((value) => {
       if (value.id === id) {
         return { ...value, completed: !value.completed };
@@ -79,7 +78,7 @@ export default function SlideBar({ getSearchResults }: SlideBarProps) {
       </div>
       <CustomButton
         title="Xóa"
-        handleClear={handleClear}
+        handleClear={handleClear} // Pass the handleClear prop
       />
     </div>
   );

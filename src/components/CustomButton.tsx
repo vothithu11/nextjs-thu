@@ -1,4 +1,3 @@
-import styles from "@/app/styles";
 import { CustomButtonProps } from "@/data/type";
 
 const CustomButton= ({ title, handleClear }:CustomButtonProps) => {
