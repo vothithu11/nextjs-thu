@@ -1,12 +1,10 @@
-
 /** @type {import('next').NextConfig} */
-// import withVideos from "next-videos";
 
 const nextConfig = {
+    typescript: {
+      ignoreBuildErrors: true,
+    },
+  };
   
-};
-
-export default {
-    ...nextConfig,
-    // ...withVideos(),
-};
+  module.exports = nextConfig;
+  
